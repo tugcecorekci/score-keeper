@@ -21,8 +21,8 @@ p1Btn.addEventListener('click', () => {
         p1Score += 1
         p1Display.textContent = p1Score
         if (p1Score == winScore) {
-            p1Btn.setAttribute("disabled", "true")
-            p2Btn.setAttribute("disabled", "true")
+            p1Btn.disabled = true
+            p2Btn.disabled = true
         }
     }
 })
@@ -32,8 +32,8 @@ p2Btn.addEventListener('click', () => {
         p2Score += 1
         p2Display.textContent = p2Score
         if (p2Score == winScore) {
-            p1Btn.setAttribute("disabled", "true")
-            p2Btn.setAttribute("disabled", "true")
+            p1Btn.disabled = true
+            p2Btn.disabled = true
         }
     }
 })
@@ -45,6 +45,6 @@ function reset() {
     p2Score = 0
     p1Display.textContent = 0
     p2Display.textContent = 0
-    p1Btn.removeAttribute('disabled');
-    p2Btn.removeAttribute('disabled');
+    p1Btn.disabled = false
+    p2Btn.disabled = false
 }
